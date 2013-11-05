@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>OutputByReturn</title>
+</head>
+<body>
+    <div>
+    <fieldset>
+        <legend>Count</legend>
+        <div class="display-field">
+            @ViewBag.Count
+        </div>
+
+    </fieldset>
+    <p>
+        @Html.ActionLink("Back to Index", "Index")
+    </p>
+    </div>
+</body>
+</html>

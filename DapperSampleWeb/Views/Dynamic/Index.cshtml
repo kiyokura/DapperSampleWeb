@@ -1,0 +1,50 @@
+﻿@model IEnumerable<dynamic>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>dynamicで受けるサンプル</h1>
+    <p>※Models.DynamicUsers.csの実装を参照のこと。</p>
+    <table>
+        <tr>
+            <th>
+                FirstName
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+    @* 今回Modelはdynamicなのでインテリセンスは効かない *@
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.Age
+            </td>
+        </tr>
+    }
+    
+    </table>
+  @Html.ActionLink("ホームに戻る", "Index","Home")
+</body>
+</html>

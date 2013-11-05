@@ -78,6 +78,9 @@ publish
 # Publish Web Output
 *.Publish.xml
 
+#Allow NuGet.exe (do not ignore)
+!NuGet.exe
+
 # NuGet Packages Directory
 packages
 

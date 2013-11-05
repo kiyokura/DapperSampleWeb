@@ -1,0 +1,51 @@
+﻿@model DapperSampleWeb.Models.UserEntity
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <fieldset>
+        <legend>UserEntity</legend>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.FirstName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.FirstName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.LastName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Age)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Age)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+        @Html.ActionLink("Back to List", "List")
+    </p>
+</body>
+</html>

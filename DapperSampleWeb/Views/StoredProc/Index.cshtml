@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+    <h1>ストアドプロシージャを実行するサンプル</h1>
+    <p>※StoredProcUsers.csの実装を参照のこと。</p>
+      <ul>
+        <li>@Html.ActionLink("戻り値（RETURN）で結果を受けるサンプル", "OutputByReturn", "StoredProc")</li>
+        <li>@Html.ActionLink("アウトプットパラメータで結果を受けるサンプル", "OutputByOutParam", "StoredProc")</li>
+        <li>@Html.ActionLink("レコードで結果を受けるサンプル", "OutputByRecord","StoredProc")</li>
+      </ul>
+        
+    </div>
+</body>
+</html>

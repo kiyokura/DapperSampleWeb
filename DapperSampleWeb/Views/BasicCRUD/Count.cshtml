@@ -1,0 +1,24 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Count</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Count</legend>
+        <div class="display-field">
+            @ViewBag.Count
+        </div>
+
+    </fieldset>
+    <p>
+        @Html.ActionLink("Back to List", "List")
+    </p>
+</body>
+</html>
