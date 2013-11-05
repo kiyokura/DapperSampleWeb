@@ -120,16 +120,20 @@
     <Compile Include="Controllers\BasicCRUDController.cs" />
     <Compile Include="Controllers\DynamicController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NestedObjectController.cs" />
     <Compile Include="Controllers\StoredProcController.cs" />
     <Compile Include="Controllers\TransController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BooksEntity.cs" />
     <Compile Include="Models\DbConnectionUtil.cs" />
     <Compile Include="Models\DynamicUsers.cs" />
+    <Compile Include="Models\NestedObjectModels.cs" />
     <Compile Include="Models\StoredProcUsers.cs" />
     <Compile Include="Models\TransUsers.cs" />
     <Compile Include="Models\UserEntity.cs" />
+    <Compile Include="Models\UserFavoriteBookEntity.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -151,7 +155,9 @@
     </Content>
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Views\NestedObject\Sample1.cshtml" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
@@ -170,6 +176,9 @@
     <Content Include="Views\StoredProc\OutputByReturn.cshtml" />
     <Content Include="Views\Trans\Edit.cshtml" />
     <Content Include="Views\Trans\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\NestedObject\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

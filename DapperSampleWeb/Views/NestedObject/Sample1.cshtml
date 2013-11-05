@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DapperSampleWeb.Models.UserFavoriteBookEntity>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sample1</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>ユーザID</th>
+            <th>ユーザ名</th>
+            <th>書籍ID</th>
+            <th>書籍名</th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.User.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.User.FirstName)</td>
+            <td>@Html.DisplayFor(modelItem => item.InterstBook.ID)</td>
+            <td>@Html.DisplayFor(modelItem => item.InterstBook.Name)</td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
