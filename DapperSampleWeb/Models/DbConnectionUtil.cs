@@ -7,10 +7,16 @@ namespace DapperSampleWeb.Models
 {
     public static class DbConnectionUtil
     {
-        public static System.Data.SqlClient.SqlConnection GetConnection()
+        public static System.Data.Common.DbConnection GetConnection()
         {
             var connectionString = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            return new System.Data.SqlClient.SqlConnection(connectionString);
+
+            // Glimpse.Adoに対応する為に、ファクトリ経由で作る
+            var factory = System.Data.Common.DbProviderFactories.GetFactory("System.Data.SqlClient");
+            var con = factory.CreateConnection();
+            con.ConnectionString = connectionString;
+
+            return con;
         }
     }
 }
