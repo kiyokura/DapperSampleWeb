@@ -133,6 +133,7 @@
     <Compile Include="Controllers\DynamicController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InStatementController.cs" />
+    <Compile Include="Controllers\MultiRowUpdateController.cs" />
     <Compile Include="Controllers\NestedObjectController.cs" />
     <Compile Include="Controllers\StoredProcController.cs" />
     <Compile Include="Controllers\TransController.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Models\DbConnectionUtil.cs" />
     <Compile Include="Models\DynamicUsers.cs" />
     <Compile Include="Models\InStatementUsers.cs" />
+    <Compile Include="Models\MultiRowUpdateUsers.cs" />
     <Compile Include="Models\NestedObjectModels.cs" />
     <Compile Include="Models\StoredProcUsers.cs" />
     <Compile Include="Models\TransUsers.cs" />
@@ -197,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\InStatement\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MultiRowUpdate\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
